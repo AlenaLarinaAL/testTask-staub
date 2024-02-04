@@ -6,6 +6,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    line-height: 1.2em;
 
     /* outline: 2px solid red;
     outline-offset: -2px; */
@@ -26,7 +27,6 @@
 @media (min-width: 768px) {
     .container {
         width: 720px;
-        text-align: left;
     }
 }
 
@@ -39,8 +39,8 @@
 }
 
 .section {
-    padding-top: 128px;
-    padding-bottom: 128px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 /* common  */
@@ -56,21 +56,30 @@
 
 }
 
-.descr {
-    font-family: 'Noto Sans', Sans-Serif;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    /* line-height: 30px; */
-}
-
 /* @media (min-width: 768px) {
-    .descr{
+    .descr {
         font-size: 20px;
         font-weight: 700;
         line-height: 28px;
         letter-spacing: 0.5px;
     }
 } */
+
+.descr {
+    font-family: 'Noto Sans', Sans-Serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+}
+
+@media (min-width: 768px) {
+    .descr {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+    }
+}
 
 .button {
     padding: 20px 29px;
@@ -98,24 +107,55 @@
 }
 
 
+
+
+/* header  */
+.logo {
+    width: 64px;
+}
+
+@media (min-width: 1200px) {
+    .logo {
+        width: 144px;
+        height: 80px;
+    }
+}
+
 .logo-link {
     padding-top: 24px;
     padding-bottom: 24px;
 }
 
-/* header  */
-.logo {
-    width: 144px;
+.header {
+    background-color: var(--common-white);
+    width: 100%;
 }
 
+@media (max-width: 1199px) {
+    .header {
+        position: fixed;
+    }
+}
 
 /* hero  */
+
 .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(20, 20, 21, 0.6)), url(https://img.freepik.com/free-photo/dietary-menu-healthy-vegan-salad-vegetables-broccoli-mushrooms-spinach-quinoa-bowl-flat-lay-top-view_2829-20115.jpg?w=996&t=st=1706975246~exp=1706975846~hmac=6950b353a5f19a04b91f906291d24c96fb0d8afb789e7c76d5441dd91b0db9b5);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
+    padding-top: 250px;
+    padding-bottom: 200px;
 }
+
+@media (min-width: 768px) {
+    .hero-container {
+        width: 500px;
+        margin-left: 20px;
+    }
+
+}
+
 
 .hero-title {
     color: var(--common-white);
@@ -124,7 +164,7 @@
 }
 
 @media (min-width: 1200px) {
-    .title {
+    .hero-title {
         font-size: 90px;
     }
 
@@ -136,8 +176,28 @@
 }
 
 /* about  */
+@media (min-width: 768px) {
+    .about-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+
+    }
+}
+
+
 .about-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
+}
+
+
+.about-title {
+    color: var(--yellow);
+    line-height: 1.2em;
+    font-size: 30px;
 }
 
 .about-item {
@@ -152,15 +212,20 @@
     background-color: var(--container-clr);
 }
 
-.about-title {
-    color: var(--yellow);
-}
-
 .about-text {
     color: var(--light-grey);
 }
 
 /* choose  */
+@media (min-width: 768px) {
+    .choose-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+
+    }
+}
+
 .choose-item {
     background-color: var(--cards-bg);
     padding: 60px 20px;
@@ -194,17 +259,58 @@
 
 
 /* mastery  */
+#video-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#play-pause-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--button-clr);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    .mastery-descr {
+        min-width: 500px;
+
+    }
+}
+
 .mastery {
     background-color: black;
 }
 
 .mastery-title {
     color: var(--common-white);
+    margin-top: 30px;
 }
 
-.mastery-descr {
+.mastery-descr-1 {
+    margin-bottom: 40px;
+}
+
+.mastery-descr-1,
+.mastery-descr-2 {
     color: var(--common-white);
     line-height: 32px;
+    font-weight: 400;
 }
 
 /* protect  */
@@ -239,4 +345,24 @@
 .occasion-block {
     padding: 20px;
     background-color: var(--cards-bg);
+}
+
+/* clients  */
+.customer {
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cust {
+    color: var(--light-grey);
+}
+
+.cust-img {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 36px;
+
+    margin-bottom: 30px;
 }
