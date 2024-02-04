@@ -1,0 +1,242 @@
+@import "./styleguide.css";
+
+.container {
+    padding-right: 24px;
+    padding-left: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    /* outline: 2px solid red;
+    outline-offset: -2px; */
+
+}
+
+
+/* // phone screen */
+@media (min-width: 480px) {
+    .container {
+        width: 448px;
+    }
+
+}
+
+
+/* // tablet screen */
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+        text-align: left;
+    }
+}
+
+/* // desktop screen */
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+
+}
+
+.section {
+    padding-top: 128px;
+    padding-bottom: 128px;
+}
+
+/* common  */
+.title {
+    font-family: Staatliches, Sans-Serif;
+    font-weight: 400;
+    font-size: 35px;
+    text-align: center;
+    color: var(--common-black);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+}
+
+.descr {
+    font-family: 'Noto Sans', Sans-Serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    /* line-height: 30px; */
+}
+
+/* @media (min-width: 768px) {
+    .descr{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+    }
+} */
+
+.button {
+    padding: 20px 29px;
+    background-color: var(--button-clr);
+    color: var(--common-white);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 23px;
+    font-weight: 500;
+
+
+    transition-property: color, background-color;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+    transition: color var(--anim-fast), background-color var(--anim-fast);
+
+}
+
+.button:hover,
+.button:focus {
+    background-color: #152c16;
+}
+
+
+.logo-link {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+/* header  */
+.logo {
+    width: 144px;
+}
+
+
+/* hero  */
+.hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(20, 20, 21, 0.6)), url(https://img.freepik.com/free-photo/dietary-menu-healthy-vegan-salad-vegetables-broccoli-mushrooms-spinach-quinoa-bowl-flat-lay-top-view_2829-20115.jpg?w=996&t=st=1706975246~exp=1706975846~hmac=6950b353a5f19a04b91f906291d24c96fb0d8afb789e7c76d5441dd91b0db9b5);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.hero-title {
+    color: var(--common-white);
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+    .title {
+        font-size: 90px;
+    }
+
+}
+
+.hero-undertitle {
+    color: var(--light-grey);
+    margin-bottom: 45px;
+}
+
+/* about  */
+.about-icon {
+    margin-bottom: 30px;
+}
+
+.about-item {
+    padding: 55px 32px;
+}
+
+.about-item:nth-child(2n) {
+    background-color: black;
+}
+
+.about-item:nth-child(2n+1) {
+    background-color: var(--container-clr);
+}
+
+.about-title {
+    color: var(--yellow);
+}
+
+.about-text {
+    color: var(--light-grey);
+}
+
+/* choose  */
+.choose-item {
+    background-color: var(--cards-bg);
+    padding: 60px 20px;
+}
+
+.choose-item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.choose-img {
+    margin-bottom: 30px;
+}
+
+.choose-text {
+
+    margin-bottom: 30px;
+}
+
+.choose-descr {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.choose-btn {
+    font-size: 18px;
+}
+
+.choose-imp {
+    font-weight: 700;
+}
+
+
+/* mastery  */
+.mastery {
+    background-color: black;
+}
+
+.mastery-title {
+    color: var(--common-white);
+}
+
+.mastery-descr {
+    color: var(--common-white);
+    line-height: 32px;
+}
+
+/* protect  */
+
+.protect-descr {
+    margin-bottom: 40px;
+}
+
+/* occasion  */
+.occasion-item {
+    padding: 50px;
+    background-position: center;
+    background-size: cover;
+}
+
+.occasion-item:nth-child(1) {
+    background-image: url(./img/7.jpg);
+}
+
+.occasion-item:nth-child(2) {
+    background-image: url(./img/8.jpg);
+}
+
+.occasion-item:nth-child(3) {
+    background-image: url(./img/9.jpg);
+}
+
+.occasion-item:nth-child(4) {
+    background-image: url(./img/10.jpg);
+}
+
+.occasion-block {
+    padding: 20px;
+    background-color: var(--cards-bg);
+}
